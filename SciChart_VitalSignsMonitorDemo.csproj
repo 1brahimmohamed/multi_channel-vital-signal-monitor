@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+    <PropertyGroup>
+        <TargetFramework>net452</TargetFramework>
+        <OutputType>WinExe</OutputType>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+    <PropertyGroup>
+        <Copyright>Copyright © 2011-2021</Copyright>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <FileVersion>1.0.0.0</FileVersion>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="SciChart.Examples.ExternalDependencies">
+            <HintPath>C:\Users\I1bra\AppData\Local\Programs\SciChart\SciChart SDK\ExamplesBin\net452\SciChart.Examples.ExternalDependencies.dll</HintPath>
+        </Reference>
+        <Reference Include="SciChart.Core">
+            <HintPath>C:\Users\I1bra\AppData\Local\Programs\SciChart\SciChart SDK\ExamplesBin\net452\SciChart.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="SciChart.Data">
+            <HintPath>C:\Users\I1bra\AppData\Local\Programs\SciChart\SciChart SDK\ExamplesBin\net452\SciChart.Data.dll</HintPath>
+        </Reference>
+        <Reference Include="SciChart.Charting">
+            <HintPath>C:\Users\I1bra\AppData\Local\Programs\SciChart\SciChart SDK\ExamplesBin\net452\SciChart.Charting.dll</HintPath>
+        </Reference>
+        <Reference Include="SciChart.Charting3D">
+            <HintPath>C:\Users\I1bra\AppData\Local\Programs\SciChart\SciChart SDK\ExamplesBin\net452\SciChart.Charting3D.dll</HintPath>
+        </Reference>
+        <Reference Include="SciChart.Drawing">
+            <HintPath>C:\Users\I1bra\AppData\Local\Programs\SciChart\SciChart SDK\ExamplesBin\net452\SciChart.Drawing.dll</HintPath>
+        </Reference>
+        <Reference Include="SciChart.Charting.DrawingTools">
+            <HintPath>C:\Users\I1bra\AppData\Local\Programs\SciChart\SciChart SDK\ExamplesBin\net452\SciChart.Charting.DrawingTools.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.31"/>
+        <PackageReference Include="System.Reactive" Version="3.1.1"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Reference Include="Microsoft.CSharp"/>
+        <Reference Include="PresentationCore"/>
+        <Reference Include="PresentationFramework"/>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Data.DataSetExtensions"/>
+        <Reference Include="System.Xaml">
+            <RequiredTargetFramework>4.5.2</RequiredTargetFramework>
+        </Reference>
+        <Reference Include="System.Xml"/>
+        <Reference Include="System.Xml.Linq"/>
+        <Reference Include="WindowsBase"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Remove="data\ico.ico"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Resource Include="ico.ico"/>
+    </ItemGroup>
+</Project>
