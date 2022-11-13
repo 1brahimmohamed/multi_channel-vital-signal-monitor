@@ -1,7 +1,0 @@
-<Window x:Class="SciChartExport.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="SBME 24 - Vital Signal Monitor"
-        Icon="C:\Users\I1bra\Desktop\SciChart_VitalSignsMonitorDemo\ico.ico"
-        xmlns:example="clr-namespace:SciChart.Examples.Examples.SeeFeaturedApplication.VitalSignsMonitor">
-    <!-- Note Visual Xccelerator Engine (DirectX is enabled in App.Xaml). You have to do this explicitly in your applications -->
-    <example:VitalSignsMonitorView />
-</Window>
