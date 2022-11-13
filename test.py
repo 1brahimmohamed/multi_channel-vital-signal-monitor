@@ -7,6 +7,7 @@ from serial import Serial
 import random
 from streamlit_option_menu import option_menu
 import hydralit_components as hc
+import plotly.express as px
 
 st.set_page_config(layout='wide', initial_sidebar_state='collapsed',)
 
@@ -32,15 +33,14 @@ menu_id = hc.nav_bar(
 leftCol, rightCol = st.columns(2)
 graph_placeholder = st.empty()
 
+if "x" not in st.session_state:
+    st.session_state["x"] = []
+    st.session_state["y"] = []
+    st.session_state["i"] = 0
+
 if (f"{menu_id}" == "Data Acquisiton"):
     with leftCol:
         fig, ax = plt.subplots()
-
-        i = 0
-        j = 0
-
-        x = list()
-        y = list()
 
         # ser = serial.Serial("COM9", 9600)
         # ser.close()
@@ -48,14 +48,22 @@ if (f"{menu_id}" == "Data Acquisiton"):
 
         while True:
             # data = ser.readline()
-            x.append(i)
-            y.append(random.randint(0, 5))
-            ymin = min(y)
-            ymax = max(y)
+            st.session_state.x.append(st.session_state.i)
+            st.session_state.y.append(random.randint(0, 5))
+            ymin = min(st.session_state.y)
+            ymax = max(st.session_state.y)
 
-            ax.plot(x, y, color='blue', markersize=12)
+            ax.plot(st.session_state.x, st.session_state.y,
+                    color='blue', markersize=12)
             ax.set_ylim([ymin, ymax])
             graph_placeholder.plotly_chart(fig)
-            i += 1
-            j += 1
+            st.session_state.i += 1
+
             plt.pause(1)
+
+# if (f"{menu_id}" == "Monitoring"):
+#     with leftCol:
+#         fig = px
+#         while True:
+#         fig2 = px.histogram(st.session_state.x, st.session_state.y)
+#         graph_placeholder.plotly_chart(fig2)
